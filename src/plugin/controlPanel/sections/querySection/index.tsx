@@ -15,6 +15,8 @@ import {
   timeseriesLimitMetric,
   percentMetrics,
   allColumns,
+  temporalColumnsLookup,
+  adhocFilters,
 } from '../../controls';
 
 export const querySection: ControlPanelSectionConfig = {
@@ -28,8 +30,8 @@ export const querySection: ControlPanelSectionConfig = {
     [timeseriesLimitMetric, orderByCols],
     [orderDesc],
     [showTotals],
-    [timeGrainSqlaStraight, 'temporal_columns_lookup'],
-    ['adhoc_filters'],
+    [timeGrainSqlaStraight, temporalColumnsLookup],
+    [adhocFilters],
     [serverPagination],
     [rowLimitStraight, serverPageLength],
   ],

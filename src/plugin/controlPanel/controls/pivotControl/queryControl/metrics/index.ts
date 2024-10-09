@@ -1,5 +1,6 @@
 import { ControlSetItem, sharedControls } from '@superset-ui/chart-controls';
 import { validateNonEmpty } from '@superset-ui/core';
+import { isPivotType } from '../../../../utils';
 
 export const metrics: ControlSetItem = {
   name: 'metrics',
@@ -7,5 +8,6 @@ export const metrics: ControlSetItem = {
     ...sharedControls.metrics,
     validators: [validateNonEmpty],
     rerender: ['conditional_formatting'],
+    visibility: isPivotType,
   },
 };

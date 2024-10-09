@@ -4,6 +4,7 @@ import {
   isAdhocColumn,
   isPhysicalColumn,
 } from '@superset-ui/core';
+import { isPivotType } from '../../../../utils';
 
 export const timeGrainSqla: ControlSetItem = {
   name: 'time_grain_sqla',
@@ -17,20 +18,22 @@ export const timeGrainSqla: ControlSetItem = {
         ]),
       );
 
-      return [
-        ...ensureIsArray(controls?.groupbyColumns.value),
-        ...ensureIsArray(controls?.groupbyRows.value),
-      ]
-        .map(selection => {
-          if (isAdhocColumn(selection)) {
-            return true;
-          }
-          if (isPhysicalColumn(selection)) {
-            return !!dttmLookup[selection];
-          }
-          return false;
-        })
-        .some(Boolean);
+      return (
+        [
+          ...ensureIsArray(controls?.groupbyColumns.value),
+          ...ensureIsArray(controls?.groupbyRows.value),
+        ]
+          .map(selection => {
+            if (isAdhocColumn(selection)) {
+              return true;
+            }
+            if (isPhysicalColumn(selection)) {
+              return !!dttmLookup[selection];
+            }
+            return false;
+          })
+          .some(Boolean) && isPivotType({ controls })
+      );
     },
   },
 };

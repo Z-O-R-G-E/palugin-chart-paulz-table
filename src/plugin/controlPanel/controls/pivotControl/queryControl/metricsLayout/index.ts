@@ -1,6 +1,7 @@
 import { ControlSetItem } from '@superset-ui/chart-controls';
 import { t } from '@superset-ui/core';
 import { MetricsLayoutEnum } from '../../../../../../types/PivotTableTypes';
+import { isPivotType } from '../../../../utils';
 
 export const metricsLayout: ControlSetItem = {
   name: 'metrics_layout',
@@ -8,6 +9,7 @@ export const metricsLayout: ControlSetItem = {
     type: 'RadioButtonControl',
     renderTrigger: true,
     label: t('Apply metrics on'),
+    visibility: isPivotType,
     default: MetricsLayoutEnum.COLUMNS,
     options: [
       [MetricsLayoutEnum.COLUMNS, t('Columns')],

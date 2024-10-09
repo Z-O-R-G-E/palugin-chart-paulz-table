@@ -30,7 +30,7 @@ export const timeGrainSqla: ControlSetItem = {
             return false;
           })
           .some(Boolean) && isStraightType({ controls })
-      );
+      ) && isStraightType({ controls });
     },
   },
 };

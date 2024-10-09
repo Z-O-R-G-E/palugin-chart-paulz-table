@@ -5,6 +5,7 @@ import {
 import { t } from '@superset-ui/core';
 
 import { PAGE_SIZE_OPTIONS } from '../../../../consts';
+import {isStraightType} from "../../../../utils";
 
 export const serverPageLength: ControlSetItem = {
   name: 'server_page_length',
@@ -16,6 +17,6 @@ export const serverPageLength: ControlSetItem = {
     choices: PAGE_SIZE_OPTIONS,
     description: t('Rows per page, 0 means no pagination'),
     visibility: ({ controls }: ControlPanelsContainerProps) =>
-      Boolean(controls?.server_pagination?.value),
+      Boolean(controls?.server_pagination?.value) && isStraightType({ controls }),
   },
 };

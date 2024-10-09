@@ -1,11 +1,13 @@
 import { ControlSetItem } from '@superset-ui/chart-controls';
 import { t } from '@superset-ui/core';
+import { isPivotType } from '../../../../utils';
 
 export const aggregateFunction: ControlSetItem = {
   name: 'aggregate_function',
   config: {
     type: 'SelectControl',
     label: t('Aggregation function'),
+    visibility: isPivotType,
     clearable: false,
     choices: [
       ['Count', t('Count')],
