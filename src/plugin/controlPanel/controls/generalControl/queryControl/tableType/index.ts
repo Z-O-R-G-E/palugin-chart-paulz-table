@@ -1,0 +1,18 @@
+import { ControlConfig, ControlSetItem } from '@superset-ui/chart-controls';
+import { t } from '@superset-ui/core';
+import { TableType, TableTypeLabel } from '../../../../consts';
+import { getTableType } from '../../../../utils';
+
+export const tableType: ControlSetItem = {
+  name: 'table_type',
+  config: {
+    type: 'RadioButtonControl',
+    label: t('Тип таблицы'),
+    default: null,
+    options: [
+      [TableType.straight, TableTypeLabel[TableType.straight]],
+      [TableType.pivot, TableTypeLabel[TableType.pivot]],
+    ],
+    mapStateToProps: ({ controls }) => ({ value: getTableType(controls) }),
+  } as ControlConfig<'RadioButtonControl'>,
+};
