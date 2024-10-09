@@ -3,25 +3,19 @@ import buildQuery from './buildQuery';
 import controlPanel from './controlPanel';
 import thumbnail from '../images/thumbnail.png';
 import transformProps from './transformProps';
-import { PaulzTableFormData, PaulzTableProps } from '../types';
-
-const metadata = new ChartMetadata({
+var metadata = new ChartMetadata({
   description: 'Используйте таблицы, чтобы продемонстрировать представление базовых данных, показать агрегированные показатели или для суммирования набора данных путем группировки нескольких статистических данных по двум осям.',
   name: t('PaulZ Table'),
-  thumbnail,
+  thumbnail
 });
-
-export default class PaulzTable extends ChartPlugin<
-  PaulzTableFormData,
-  PaulzTableProps
-> {
+export default class PaulzTable extends ChartPlugin {
   constructor() {
     super({
       buildQuery,
       controlPanel,
       loadChart: () => import('../PaulzTable'),
       metadata,
-      transformProps,
+      transformProps
     });
   }
 }
