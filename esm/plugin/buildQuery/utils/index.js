@@ -1,1 +1,0 @@
-export { getQueryMode } from './getQueryMode';

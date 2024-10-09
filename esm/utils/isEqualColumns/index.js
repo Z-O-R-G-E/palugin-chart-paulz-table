@@ -1,7 +1,0 @@
-import { isEqualArray } from '@superset-ui/core';
-export default function index(propsA, propsB) {
-  var _a$queriesData, _b$queriesData, _a$queriesData2, _b$queriesData2;
-  var a = propsA[0];
-  var b = propsB[0];
-  return a.datasource.columnFormats === b.datasource.columnFormats && a.datasource.currencyFormats === b.datasource.currencyFormats && a.datasource.verboseMap === b.datasource.verboseMap && a.formData.tableTimestampFormat === b.formData.tableTimestampFormat && a.formData.timeGrainSqla === b.formData.timeGrainSqla && JSON.stringify(a.formData.columnConfig || null) === JSON.stringify(b.formData.columnConfig || null) && isEqualArray(a.formData.metrics, b.formData.metrics) && isEqualArray((_a$queriesData = a.queriesData) == null || (_a$queriesData = _a$queriesData[0]) == null ? void 0 : _a$queriesData.colnames, (_b$queriesData = b.queriesData) == null || (_b$queriesData = _b$queriesData[0]) == null ? void 0 : _b$queriesData.colnames) && isEqualArray((_a$queriesData2 = a.queriesData) == null || (_a$queriesData2 = _a$queriesData2[0]) == null ? void 0 : _a$queriesData2.coltypes, (_b$queriesData2 = b.queriesData) == null || (_b$queriesData2 = _b$queriesData2[0]) == null ? void 0 : _b$queriesData2.coltypes) && JSON.stringify(a.formData.extraFilters || null) === JSON.stringify(b.formData.extraFilters || null) && JSON.stringify(a.formData.extraFormData || null) === JSON.stringify(b.formData.extraFormData || null) && JSON.stringify(a.rawFormData.column_config || null) === JSON.stringify(b.rawFormData.column_config || null);
-}
