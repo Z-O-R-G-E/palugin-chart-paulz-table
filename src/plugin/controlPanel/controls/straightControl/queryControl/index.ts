@@ -10,5 +10,3 @@ export { percentMetrics } from './percentMetrics';
 export { metrics as metricsStraight } from './metrics';
 export { groupby } from './groupby';
 export { queryMode } from './queryMode';
-export { temporalColumnsLookup } from './temporalColumnsLookup';
-export { adhocFilters } from './adhocFilters';

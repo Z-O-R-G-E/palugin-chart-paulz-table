@@ -10,7 +10,6 @@ import {
   colorPn,
   allowRearrangeColumns,
   columnConfig,
-  conditionalFormatting,
 } from '../../controls';
 
 export const customizeSection: ControlPanelSectionConfig = {
@@ -23,6 +22,5 @@ export const customizeSection: ControlPanelSectionConfig = {
     [alignPn, colorPn],
     [allowRearrangeColumns],
     [columnConfig],
-    [conditionalFormatting],
   ],
 };

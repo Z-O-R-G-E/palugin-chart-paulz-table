@@ -1,6 +1,6 @@
 export { colorPn } from './colorPn';
 export { alignPn } from './alignPn';
-export { conditionalFormatting } from './conditionalFormatting';
+export { conditionalFormatting as conditionalFormattingStraight } from './conditionalFormatting';
 export { columnConfig } from './columnConfig';
 export { pageLength } from './pageLength';
 export { tableTimestampFormat } from './tableTimestampFormat';
