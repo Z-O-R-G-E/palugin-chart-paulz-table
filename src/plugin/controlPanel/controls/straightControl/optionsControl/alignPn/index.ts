@@ -3,7 +3,7 @@ import { t } from '@superset-ui/core';
 import { isStraightType } from '../../../../utils';
 
 export const alignPn: ControlSetItem = {
-  name: 'align_pn',
+  name: 'alignPn',
   config: {
     type: 'CheckboxControl',
     label: t('Align +/-'),

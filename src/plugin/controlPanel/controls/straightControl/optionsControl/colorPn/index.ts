@@ -3,7 +3,7 @@ import { t } from '@superset-ui/core';
 import { isStraightType } from '../../../../utils';
 
 export const colorPn: ControlSetItem = {
-  name: 'color_pn',
+  name: 'colorPn',
   config: {
     type: 'CheckboxControl',
     label: t('Color +/-'),

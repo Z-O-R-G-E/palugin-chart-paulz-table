@@ -3,7 +3,7 @@ import { t } from '@superset-ui/core';
 import { isPivotType } from '../../../../utils';
 
 export const rowTotals: ControlSetItem = {
-  name: 'row_totals',
+  name: 'rowTotals',
   config: {
     type: 'CheckboxControl',
     label: t('Show rows total'),

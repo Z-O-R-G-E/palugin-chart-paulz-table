@@ -3,7 +3,7 @@ import { t } from '@superset-ui/core';
 import { isPivotType } from '../../../../utils';
 
 export const rowLimit: ControlSetItem = {
-  name: 'row_limit',
+  name: 'rowLimit',
   config: {
     ...sharedControls.row_limit,
     label: t('Cell limit'),

@@ -4,7 +4,7 @@ import { t } from '@superset-ui/core';
 import { isAggMode, isStraightType } from '../../../../utils';
 
 export const showTotals: ControlSetItem = {
-  name: 'show_totals',
+  name: 'showTotals',
   config: {
     type: 'CheckboxControl',
     label: t('Show totals'),

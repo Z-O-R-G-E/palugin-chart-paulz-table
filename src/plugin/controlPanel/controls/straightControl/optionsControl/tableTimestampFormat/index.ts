@@ -6,7 +6,7 @@ import { smartDateFormatter, t } from '@superset-ui/core';
 import { isStraightType } from '../../../../utils';
 
 export const tableTimestampFormat: ControlSetItem = {
-  name: 'table_timestamp_format',
+  name: 'tableTimestampFormat',
   config: {
     type: 'SelectControl',
     freeForm: true,

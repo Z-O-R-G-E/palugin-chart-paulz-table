@@ -36,10 +36,10 @@ export const metrics: ControlSetItem = {
       datasource,
       externalValidationErrors: validateAggControlValues(controls, [
         controls.groupby?.value,
-        controls.percent_metrics?.value,
+        controls.percentMetrics?.value,
         controlState.value,
       ]),
     }),
-    rerender: ['groupby', 'percent_metrics'],
+    rerender: ['groupby', 'percentMetrics'],
   },
 };

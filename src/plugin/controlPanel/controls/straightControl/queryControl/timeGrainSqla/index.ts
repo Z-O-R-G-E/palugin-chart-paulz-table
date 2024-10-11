@@ -7,7 +7,7 @@ import {
 import { isStraightType } from '../../../../utils';
 
 export const timeGrainSqla: ControlSetItem = {
-  name: 'time_grain_sqla',
+  name: 'timeGrainSqla',
   config: {
     ...sharedControls.time_grain_sqla,
     visibility: ({ controls }) => {
@@ -29,8 +29,10 @@ export const timeGrainSqla: ControlSetItem = {
             }
             return false;
           })
-          .some(Boolean) && isStraightType({ controls })
-      ) && isStraightType({ controls });
+          .some(Boolean) &&
+        isStraightType({ controls }) &&
+        isStraightType({ controls })
+      );
     },
   },
 };

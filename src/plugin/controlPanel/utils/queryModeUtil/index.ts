@@ -6,11 +6,11 @@ import { QueryFormColumn, ensureIsArray, t } from '@superset-ui/core';
 import { QueryMode } from '../../consts';
 
 export function getQueryMode(controls: ControlStateMapping): QueryMode {
-  const mode = controls?.query_mode?.value;
+  const mode = controls?.queryMode?.value;
   if (mode === QueryMode.aggregate || mode === QueryMode.raw) {
     return mode as QueryMode;
   }
-  const rawColumns = controls?.all_columns?.value as
+  const rawColumns = controls?.allColumns?.value as
     | QueryFormColumn[]
     | undefined;
   const hasRawColumns = rawColumns && rawColumns.length > 0;

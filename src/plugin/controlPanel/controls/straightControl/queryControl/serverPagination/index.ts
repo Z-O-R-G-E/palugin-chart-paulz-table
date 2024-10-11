@@ -1,9 +1,9 @@
 import { ControlSetItem } from '@superset-ui/chart-controls';
 import { t } from '@superset-ui/core';
-import {isStraightType} from "../../../../utils";
+import { isStraightType } from '../../../../utils';
 
 export const serverPagination: ControlSetItem = {
-  name: 'server_pagination',
+  name: 'serverPagination',
   config: {
     type: 'CheckboxControl',
     label: t('Server pagination'),

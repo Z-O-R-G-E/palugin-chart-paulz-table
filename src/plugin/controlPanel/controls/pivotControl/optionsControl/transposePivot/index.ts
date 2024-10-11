@@ -3,7 +3,7 @@ import { t } from '@superset-ui/core';
 import { isPivotType } from '../../../../utils';
 
 export const transposePivot: ControlSetItem = {
-  name: 'transpose_pivot',
+  name: 'transposePivot',
   config: {
     type: 'CheckboxControl',
     label: t('Transpose pivot'),

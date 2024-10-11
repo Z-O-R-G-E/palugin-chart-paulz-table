@@ -4,7 +4,7 @@ import { t } from '@superset-ui/core';
 import { isRawMode, isStraightType } from '../../../../utils';
 
 export const orderByCols: ControlSetItem = {
-  name: 'order_by_cols',
+  name: 'orderByCols',
   config: {
     type: 'SelectControl',
     label: t('Ordering'),

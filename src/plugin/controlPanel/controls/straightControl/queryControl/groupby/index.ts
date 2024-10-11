@@ -23,12 +23,12 @@ export const groupby: ControlSetItem = {
       const newState = originalMapStateToProps?.(state, controlState) ?? {};
       newState.externalValidationErrors = validateAggControlValues(controls, [
         controls.metrics?.value,
-        controls.percent_metrics?.value,
+        controls.percentMetrics?.value,
         controlState.value,
       ]);
 
       return newState;
     },
-    rerender: ['metrics', 'percent_metrics'],
+    rerender: ['metrics', 'percentMetrics'],
   },
 };

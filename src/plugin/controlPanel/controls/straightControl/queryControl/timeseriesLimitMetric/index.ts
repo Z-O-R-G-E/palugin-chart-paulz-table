@@ -1,10 +1,11 @@
-import { ControlSetItem } from '@superset-ui/chart-controls';
+import { ControlSetItem, sharedControls } from '@superset-ui/chart-controls';
 
 import { isAggMode, isStraightType } from '../../../../utils';
 
 export const timeseriesLimitMetric: ControlSetItem = {
-  name: 'timeseries_limit_metric',
-  override: {
+  name: 'timeseriesLimitMetric',
+  config: {
+    ...sharedControls.timeseries_limit_metric,
     visibility: ({ controls }) => {
       return isAggMode({ controls }) && isStraightType({ controls });
     },

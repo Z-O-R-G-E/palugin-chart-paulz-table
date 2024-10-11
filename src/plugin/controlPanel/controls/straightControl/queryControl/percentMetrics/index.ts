@@ -13,7 +13,7 @@ import {
 } from '../../../../utils';
 
 export const percentMetrics: ControlSetItem = {
-  name: 'percent_metrics',
+  name: 'percentMetrics',
   config: {
     ...sharedControls.metrics,
     label: t('Percentage metrics'),

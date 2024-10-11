@@ -3,7 +3,7 @@ import { t } from '@superset-ui/core';
 import { isStraightType } from '../../../../utils';
 
 export const allowRearrangeColumns: ControlSetItem = {
-  name: 'allow_rearrange_columns',
+  name: 'allowRearrangeColumns',
   config: {
     type: 'CheckboxControl',
     label: t('Allow columns to be rearranged'),

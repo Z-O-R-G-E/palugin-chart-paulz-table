@@ -3,7 +3,7 @@ import { t } from '@superset-ui/core';
 import { isPivotType } from '../../../../utils';
 
 export const seriesLimitMetric: ControlSetItem = {
-  name: 'series_limit_metric',
+  name: 'seriesLimitMetric',
   config: {
     ...sharedControls.series_limit_metric,
     visibility: isPivotType,

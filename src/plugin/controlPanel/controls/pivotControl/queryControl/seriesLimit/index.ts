@@ -1,6 +1,6 @@
-import { ControlSetItem } from '@superset-ui/chart-controls';
+import { ControlSetItem, sharedControls } from '@superset-ui/chart-controls';
 
 export const seriesLimit: ControlSetItem = {
-  name: 'series_limit',
-  override: {},
+  name: 'seriesLimit',
+  config: { ...sharedControls.series_limit },
 };

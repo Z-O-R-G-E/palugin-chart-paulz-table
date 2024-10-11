@@ -3,7 +3,7 @@ import { t } from '@superset-ui/core';
 import { isPivotType } from '../../../../utils';
 
 export const groupbyColumns: ControlSetItem = {
-  name: 'groupby_columns',
+  name: 'groupbyColumns',
   config: {
     ...sharedControls.groupby,
     label: t('Columns'),

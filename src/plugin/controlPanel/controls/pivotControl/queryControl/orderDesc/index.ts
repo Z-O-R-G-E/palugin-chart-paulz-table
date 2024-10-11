@@ -3,7 +3,7 @@ import { t } from '@superset-ui/core';
 import { isPivotType } from '../../../../utils';
 
 export const orderDesc: ControlSetItem = {
-  name: 'order_desc',
+  name: 'orderDesc',
   config: {
     type: 'CheckboxControl',
     label: t('Sort Descending'),

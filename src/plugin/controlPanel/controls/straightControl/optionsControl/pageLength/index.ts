@@ -7,7 +7,7 @@ import { PAGE_SIZE_OPTIONS } from '../../../../consts';
 import { isStraightType } from '../../../../utils';
 
 export const pageLength: ControlSetItem = {
-  name: 'page_length',
+  name: 'pageLength',
   config: {
     type: 'SelectControl',
     freeForm: true,
@@ -17,6 +17,6 @@ export const pageLength: ControlSetItem = {
     choices: PAGE_SIZE_OPTIONS,
     description: t('Rows per page, 0 means no pagination'),
     visibility: ({ controls }: ControlPanelsContainerProps) =>
-      !controls?.server_pagination?.value && isStraightType({ controls }),
+      !controls?.serverPagination?.value && isStraightType({ controls }),
   },
 };

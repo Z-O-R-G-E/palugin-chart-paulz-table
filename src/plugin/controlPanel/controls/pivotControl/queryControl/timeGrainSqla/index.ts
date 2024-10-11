@@ -7,7 +7,7 @@ import {
 import { isPivotType } from '../../../../utils';
 
 export const timeGrainSqla: ControlSetItem = {
-  name: 'time_grain_sqla',
+  name: 'timeGrainSqla',
   config: {
     ...sharedControls.time_grain_sqla,
     visibility: ({ controls }) => {

@@ -3,7 +3,7 @@ import { GenericDataType, t } from '@superset-ui/core';
 import { isStraightType } from '../../../../utils';
 
 export const conditionalFormatting: ControlSetItem = {
-  name: 'conditional_formatting',
+  name: 'conditionalFormatting',
   config: {
     type: 'ConditionalFormattingControl',
     visibility: isStraightType,

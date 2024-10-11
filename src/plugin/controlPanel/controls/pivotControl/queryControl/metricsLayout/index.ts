@@ -4,7 +4,7 @@ import { MetricsLayoutEnum } from '../../../../../../types/PivotTableTypes';
 import { isPivotType } from '../../../../utils';
 
 export const metricsLayout: ControlSetItem = {
-  name: 'metrics_layout',
+  name: 'metricsLayout',
   config: {
     type: 'RadioButtonControl',
     renderTrigger: true,

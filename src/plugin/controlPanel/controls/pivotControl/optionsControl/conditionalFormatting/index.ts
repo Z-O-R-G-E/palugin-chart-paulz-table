@@ -3,7 +3,7 @@ import { QueryFormMetric, t } from '@superset-ui/core';
 import { isPivotType } from '../../../../utils';
 
 export const conditionalFormatting: ControlSetItem = {
-  name: 'conditional_formatting',
+  name: 'conditionalFormatting',
   config: {
     type: 'ConditionalFormattingControl',
     renderTrigger: true,

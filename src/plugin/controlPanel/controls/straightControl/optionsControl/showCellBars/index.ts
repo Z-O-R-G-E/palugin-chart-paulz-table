@@ -3,7 +3,7 @@ import { t } from '@superset-ui/core';
 import { isStraightType } from '../../../../utils';
 
 export const showCellBars: ControlSetItem = {
-  name: 'show_cell_bars',
+  name: 'showCellBars',
   config: {
     type: 'CheckboxControl',
     label: t('Cell bars'),

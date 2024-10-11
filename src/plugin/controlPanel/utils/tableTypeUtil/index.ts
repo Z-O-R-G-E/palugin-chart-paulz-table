@@ -5,7 +5,7 @@ import {
 import { TableType } from '../../consts';
 
 export function getTableType(controls: ControlStateMapping): TableType {
-  const type = controls?.table_type?.value;
+  const type = controls?.tableType?.value;
   if (type === TableType.straight || type === TableType.pivot) {
     return type as TableType;
   }

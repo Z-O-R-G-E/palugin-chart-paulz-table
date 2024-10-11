@@ -3,7 +3,7 @@ import { ChartDataResponseResult, t } from '@superset-ui/core';
 import { isStraightType } from '../../../../utils';
 
 export const columnConfig: ControlSetItem = {
-  name: 'column_config',
+  name: 'columnConfig',
   config: {
     type: 'ColumnConfigControl',
     label: t('Customize columns'),

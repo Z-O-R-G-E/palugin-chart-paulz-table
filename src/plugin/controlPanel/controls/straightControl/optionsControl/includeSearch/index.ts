@@ -3,7 +3,7 @@ import { t } from '@superset-ui/core';
 import { isStraightType } from '../../../../utils';
 
 export const includeSearch: ControlSetItem = {
-  name: 'include_search',
+  name: 'includeSearch',
   config: {
     type: 'CheckboxControl',
     label: t('Search box'),

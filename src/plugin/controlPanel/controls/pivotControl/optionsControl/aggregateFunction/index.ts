@@ -3,7 +3,7 @@ import { t } from '@superset-ui/core';
 import { isPivotType } from '../../../../utils';
 
 export const aggregateFunction: ControlSetItem = {
-  name: 'aggregate_function',
+  name: 'aggregateFunction',
   config: {
     type: 'SelectControl',
     label: t('Aggregation function'),

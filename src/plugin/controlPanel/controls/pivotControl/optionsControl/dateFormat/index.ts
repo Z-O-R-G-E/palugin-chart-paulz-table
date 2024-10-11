@@ -6,7 +6,7 @@ import { smartDateFormatter, t } from '@superset-ui/core';
 import { isPivotType } from '../../../../utils';
 
 export const dateFormat: ControlSetItem = {
-  name: 'date_format',
+  name: 'dateFormat',
   config: {
     type: 'SelectControl',
     freeForm: true,

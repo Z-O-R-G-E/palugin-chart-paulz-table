@@ -1,6 +1,8 @@
-import { ControlSetItem } from '@superset-ui/chart-controls';
+import { ControlSetItem, sharedControls } from '@superset-ui/chart-controls';
 
 export const adhocFilters: ControlSetItem = {
-  name: 'adhoc_filters',
-  override: {},
+  name: 'adhocFilters',
+  config: {
+    ...sharedControls.adhoc_filters,
+  },
 };

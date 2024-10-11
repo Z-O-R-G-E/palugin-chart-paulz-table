@@ -4,7 +4,7 @@ import { QueryMode, QueryModeLabel } from '../../../../consts';
 import { getQueryMode, isStraightType } from '../../../../utils';
 
 export const queryMode: ControlSetItem = {
-  name: 'query_mode',
+  name: 'queryMode',
   config: {
     type: 'RadioButtonControl',
     label: t('Тип запроса'),
@@ -15,6 +15,6 @@ export const queryMode: ControlSetItem = {
     ],
     mapStateToProps: ({ controls }) => ({ value: getQueryMode(controls) }),
     visibility: isStraightType,
-    rerender: ['all_columns', 'groupby', 'metrics', 'percent_metrics'],
+    rerender: ['allColumns', 'groupby', 'metrics', 'percentMetrics'],
   },
 };

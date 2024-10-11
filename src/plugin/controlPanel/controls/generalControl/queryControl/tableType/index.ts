@@ -4,7 +4,7 @@ import { TableType, TableTypeLabel } from '../../../../consts';
 import { getTableType } from '../../../../utils';
 
 export const tableType: ControlSetItem = {
-  name: 'table_type',
+  name: 'tableType',
   config: {
     type: 'RadioButtonControl',
     label: t('Тип таблицы'),

@@ -3,7 +3,7 @@ import { t } from '@superset-ui/core';
 import { isPivotType } from '../../../../utils';
 
 export const combineMetric: ControlSetItem = {
-  name: 'combine_metric',
+  name: 'combineMetric',
   config: {
     type: 'CheckboxControl',
     label: t('Combine metrics'),

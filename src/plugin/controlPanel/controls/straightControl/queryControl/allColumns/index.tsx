@@ -10,7 +10,7 @@ import { ensureIsArray, t } from '@superset-ui/core';
 import { getQueryMode, isRawMode, isStraightType } from '../../../../utils';
 
 export const allColumns: ControlSetItem = {
-  name: 'all_columns',
+  name: 'allColumns',
   config: {
     ...sharedControls.groupby,
     label: t('Columns'),

@@ -7,7 +7,7 @@ export const metrics: ControlSetItem = {
   config: {
     ...sharedControls.metrics,
     validators: [validateNonEmpty],
-    rerender: ['conditional_formatting'],
+    rerender: ['conditionalFormatting'],
     visibility: isPivotType,
   },
 };
