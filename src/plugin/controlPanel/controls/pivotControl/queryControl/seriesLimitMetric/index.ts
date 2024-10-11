@@ -6,10 +6,11 @@ export const seriesLimitMetric: ControlSetItem = {
   name: 'seriesLimitMetric',
   config: {
     ...sharedControls.series_limit_metric,
+    label: t('Метрика предела серии'),
     visibility: isPivotType,
     description: t(
-      'Metric used to define how the top series are sorted if a series or cell limit is present. ' +
-        'If undefined reverts to the first metric (where appropriate).',
+      'Метрика, используемая для определения того, как сортируются верхние серии, если присутствует ограничение на серию или ячейку.' +
+        ' Если не определено, возвращается к первой метрике (где это возможно).',
     ),
   },
 };

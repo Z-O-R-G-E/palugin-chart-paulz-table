@@ -6,10 +6,10 @@ export const colTotals: ControlSetItem = {
   name: 'colTotals',
   config: {
     type: 'CheckboxControl',
-    label: t('Show columns total'),
+    label: t('Показать общее количество столбцов'),
     visibility: isPivotType,
     default: false,
     renderTrigger: true,
-    description: t('Display column level total'),
+    description: t('Отображение итогового уровня столбца'),
   },
 };

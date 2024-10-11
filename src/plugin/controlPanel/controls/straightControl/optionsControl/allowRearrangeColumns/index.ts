@@ -6,12 +6,12 @@ export const allowRearrangeColumns: ControlSetItem = {
   name: 'allowRearrangeColumns',
   config: {
     type: 'CheckboxControl',
-    label: t('Allow columns to be rearranged'),
+    label: t('Разрешить перестановку столбцов'),
     renderTrigger: true,
     default: false,
     visibility: isStraightType,
     description: t(
-      "Allow end user to drag-and-drop column headers to rearrange them. Note their changes won't persist for the next time they open the chart.",
+      'Разрешите конечному пользователю перетаскивать заголовки столбцов, чтобы изменить их порядок. Обратите внимание, что их изменения не сохранятся при следующем открытии диаграммы.',
     ),
   },
 };

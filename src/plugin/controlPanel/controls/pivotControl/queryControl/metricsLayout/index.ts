@@ -8,13 +8,15 @@ export const metricsLayout: ControlSetItem = {
   config: {
     type: 'RadioButtonControl',
     renderTrigger: true,
-    label: t('Apply metrics on'),
+    label: t('Применить метрики к'),
     visibility: isPivotType,
     default: MetricsLayoutEnum.COLUMNS,
     options: [
-      [MetricsLayoutEnum.COLUMNS, t('Columns')],
-      [MetricsLayoutEnum.ROWS, t('Rows')],
+      [MetricsLayoutEnum.COLUMNS, t('Столбцы')],
+      [MetricsLayoutEnum.ROWS, t('Строки')],
     ],
-    description: t('Use metrics as a top level group for columns or for rows'),
+    description: t(
+      'Используйте метрики в качестве группы верхнего уровня для столбцов или строк.',
+    ),
   },
 };

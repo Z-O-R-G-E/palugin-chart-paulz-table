@@ -3,6 +3,7 @@ import {
   ensureIsArray,
   isAdhocColumn,
   isPhysicalColumn,
+  t,
 } from '@superset-ui/core';
 import { isStraightType } from '../../../../utils';
 
@@ -10,6 +11,7 @@ export const timeGrainSqla: ControlSetItem = {
   name: 'timeGrainSqla',
   config: {
     ...sharedControls.time_grain_sqla,
+    label: t('Гранулярность времени SQLa'),
     visibility: ({ controls }) => {
       const dttmLookup = Object.fromEntries(
         ensureIsArray(controls?.groupby?.options).map(option => [

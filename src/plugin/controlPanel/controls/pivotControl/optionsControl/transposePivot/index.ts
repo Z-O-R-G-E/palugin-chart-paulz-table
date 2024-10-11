@@ -6,10 +6,10 @@ export const transposePivot: ControlSetItem = {
   name: 'transposePivot',
   config: {
     type: 'CheckboxControl',
-    label: t('Transpose pivot'),
+    label: t('Транспонировать точку поворота'),
     visibility: isPivotType,
     default: false,
-    description: t('Swap rows and columns'),
+    description: t('Поменять местами строки и столбцы'),
     renderTrigger: true,
   },
 };

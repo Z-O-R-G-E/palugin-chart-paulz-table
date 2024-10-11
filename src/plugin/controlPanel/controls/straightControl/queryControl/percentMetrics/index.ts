@@ -16,9 +16,9 @@ export const percentMetrics: ControlSetItem = {
   name: 'percentMetrics',
   config: {
     ...sharedControls.metrics,
-    label: t('Percentage metrics'),
+    label: t('Процентные показатели'),
     description: t(
-      'Metrics for which percentage of total are to be displayed. Calculated from only data within the row limit.',
+      'Метрики, для которых должен отображаться процент от общего числа. Рассчитывается только на основе данных, находящихся в пределах строки.',
     ),
     visibility: ({ controls }) => {
       return isAggMode({ controls }) && isStraightType({ controls });

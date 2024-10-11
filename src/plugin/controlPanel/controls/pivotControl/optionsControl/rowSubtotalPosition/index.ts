@@ -6,15 +6,14 @@ export const rowSubtotalPosition: ControlSetItem = {
   name: 'rowSubtotalPosition',
   config: {
     type: 'SelectControl',
-    label: t('Rows subtotal position'),
+    label: t('Промежуточный итог по строкам'),
     visibility: isPivotType,
     default: false,
     choices: [
-      // [value, label]
-      [true, t('Top')],
-      [false, t('Bottom')],
+      [true, t('Сверху')],
+      [false, t('Снизу')],
     ],
     renderTrigger: true,
-    description: t('Position of row level subtotal'),
+    description: t('Позиция промежуточного итога уровня'),
   },
 };

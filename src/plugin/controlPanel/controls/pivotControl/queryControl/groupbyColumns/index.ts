@@ -6,8 +6,8 @@ export const groupbyColumns: ControlSetItem = {
   name: 'groupbyColumns',
   config: {
     ...sharedControls.groupby,
-    label: t('Columns'),
-    description: t('Columns to group by on the columns'),
+    label: t('Столбцы'),
+    description: t('Столбцы для группировки по столбцам'),
     visibility: isPivotType,
   },
 };

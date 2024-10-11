@@ -10,12 +10,12 @@ export const tableTimestampFormat: ControlSetItem = {
   config: {
     type: 'SelectControl',
     freeForm: true,
-    label: t('Timestamp format'),
+    label: t('Формат временной метки'),
     default: smartDateFormatter.id,
     renderTrigger: true,
     clearable: false,
     choices: D3_TIME_FORMAT_OPTIONS,
-    description: t('D3 time format for datetime columns'),
+    description: t('Формат времени D3 для столбцов даты и времени'),
     visibility: isStraightType,
   },
 };

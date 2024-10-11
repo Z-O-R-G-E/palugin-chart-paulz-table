@@ -7,8 +7,8 @@ export const orderByCols: ControlSetItem = {
   name: 'orderByCols',
   config: {
     type: 'SelectControl',
-    label: t('Ordering'),
-    description: t('Order results by selected columns'),
+    label: t('Сортировка'),
+    description: t('Упорядочить результаты по выбранным столбцам'),
     multi: true,
     default: [],
     mapStateToProps: ({ datasource }) => ({

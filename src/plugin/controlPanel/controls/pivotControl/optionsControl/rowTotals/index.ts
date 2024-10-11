@@ -6,10 +6,10 @@ export const rowTotals: ControlSetItem = {
   name: 'rowTotals',
   config: {
     type: 'CheckboxControl',
-    label: t('Show rows total'),
+    label: t('Показать общее количество строк'),
     visibility: isPivotType,
     default: false,
     renderTrigger: true,
-    description: t('Display row level total'),
+    description: t('Отображать итог на уровне строки'),
   },
 };

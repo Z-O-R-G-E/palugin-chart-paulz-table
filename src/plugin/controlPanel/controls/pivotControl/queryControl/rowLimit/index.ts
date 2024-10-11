@@ -6,8 +6,8 @@ export const rowLimit: ControlSetItem = {
   name: 'rowLimit',
   config: {
     ...sharedControls.row_limit,
-    label: t('Cell limit'),
+    label: t('Лимит ячеек'),
     visibility: isPivotType,
-    description: t('Limits the number of cells that get retrieved.'),
+    description: t('Ограничивает количество извлекаемых ячеек.'),
   },
 };

@@ -6,12 +6,11 @@ export const combineMetric: ControlSetItem = {
   name: 'combineMetric',
   config: {
     type: 'CheckboxControl',
-    label: t('Combine metrics'),
+    label: t('Объединить показатели'),
     visibility: isPivotType,
     default: false,
     description: t(
-      'Display metrics side by side within each column, as ' +
-        'opposed to each column being displayed side by side for each metric.',
+      'Отображайте метрики рядом в каждом столбце, а не каждый столбец отображается рядом для каждой метрики.',
     ),
     renderTrigger: true,
   },

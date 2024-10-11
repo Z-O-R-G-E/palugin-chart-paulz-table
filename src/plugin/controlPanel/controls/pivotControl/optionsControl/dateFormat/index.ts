@@ -10,11 +10,11 @@ export const dateFormat: ControlSetItem = {
   config: {
     type: 'SelectControl',
     freeForm: true,
-    label: t('Date format'),
+    label: t('Формат даты'),
     visibility: isPivotType,
     default: smartDateFormatter.id,
     renderTrigger: true,
     choices: D3_TIME_FORMAT_OPTIONS,
-    description: t('D3 time format for datetime columns'),
+    description: t('Формат времени D3 для столбцов даты и времени'),
   },
 };

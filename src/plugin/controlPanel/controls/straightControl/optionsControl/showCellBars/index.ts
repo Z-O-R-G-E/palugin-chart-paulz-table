@@ -6,12 +6,10 @@ export const showCellBars: ControlSetItem = {
   name: 'showCellBars',
   config: {
     type: 'CheckboxControl',
-    label: t('Cell bars'),
+    label: t('Клеточные бары'),
     renderTrigger: true,
     default: true,
     visibility: isStraightType,
-    description: t(
-      'Whether to display a bar chart background in table columns',
-    ),
+    description: t('Отображать ли фон гистограммы в столбцах таблицы'),
   },
 };

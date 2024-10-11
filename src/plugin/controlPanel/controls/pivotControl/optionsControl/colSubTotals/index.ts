@@ -6,10 +6,10 @@ export const colSubTotals: ControlSetItem = {
   name: 'colSubTotals',
   config: {
     type: 'CheckboxControl',
-    label: t('Show columns subtotal'),
+    label: t('Показать промежуточный итог столбцов'),
     visibility: isPivotType,
     default: false,
     renderTrigger: true,
-    description: t('Display column level subtotal'),
+    description: t('Отобразить промежуточный итог на уровне столбца'),
   },
 };

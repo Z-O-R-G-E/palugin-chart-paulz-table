@@ -7,9 +7,9 @@ export const conditionalFormatting: ControlSetItem = {
   config: {
     type: 'ConditionalFormattingControl',
     renderTrigger: true,
-    label: t('Conditional formatting'),
+    label: t('Условное форматирование'),
     visibility: isPivotType,
-    description: t('Apply conditional color formatting to metrics'),
+    description: t('Применение условного форматирования цвета к метрикам'),
     mapStateToProps(explore, _, chart) {
       const values =
         (explore?.controls?.metrics?.value as QueryFormMetric[]) ?? [];

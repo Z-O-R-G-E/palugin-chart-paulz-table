@@ -6,10 +6,10 @@ export const serverPagination: ControlSetItem = {
   name: 'serverPagination',
   config: {
     type: 'CheckboxControl',
-    label: t('Server pagination'),
+    label: t('Серверная пагинация'),
     visibility: isStraightType,
     description: t(
-      'Enable server side pagination of results (experimental feature)',
+      'Включить разбивку результатов на стороне сервера (экспериментальная функция)',
     ),
     default: false,
   },

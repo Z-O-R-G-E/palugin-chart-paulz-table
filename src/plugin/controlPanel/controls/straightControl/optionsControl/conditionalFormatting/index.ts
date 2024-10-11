@@ -8,8 +8,10 @@ export const conditionalFormatting: ControlSetItem = {
     type: 'ConditionalFormattingControl',
     visibility: isStraightType,
     renderTrigger: true,
-    label: t('Conditional formatting'),
-    description: t('Apply conditional color formatting to numeric columns'),
+    label: t('Условное форматирование'),
+    description: t(
+      'Применение условного форматирования цвета к числовым столбцам',
+    ),
     shouldMapStateToProps() {
       return true;
     },

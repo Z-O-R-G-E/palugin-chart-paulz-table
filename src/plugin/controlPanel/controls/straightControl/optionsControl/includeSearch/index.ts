@@ -6,10 +6,10 @@ export const includeSearch: ControlSetItem = {
   name: 'includeSearch',
   config: {
     type: 'CheckboxControl',
-    label: t('Search box'),
+    label: t('Поле поиска'),
     renderTrigger: true,
     default: false,
-    description: t('Whether to include a client-side search box'),
+    description: t('Включить ли окно поиска на стороне клиента'),
     visibility: isStraightType,
   },
 };

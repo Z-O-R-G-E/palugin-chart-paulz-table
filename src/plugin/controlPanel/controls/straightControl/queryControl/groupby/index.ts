@@ -9,10 +9,13 @@ import {
   isStraightType,
   validateAggControlValues,
 } from '../../../../utils';
+import { t } from '@superset-ui/core';
 
 export const groupby: ControlSetItem = {
   name: 'groupby',
-  override: {
+  config: {
+    ...sharedControls.groupby,
+    label: t('Группировать по'),
     visibility: ({ controls }) => {
       return isAggMode({ controls }) && isStraightType({ controls });
     },

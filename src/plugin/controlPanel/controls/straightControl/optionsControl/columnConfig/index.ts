@@ -6,8 +6,8 @@ export const columnConfig: ControlSetItem = {
   name: 'columnConfig',
   config: {
     type: 'ColumnConfigControl',
-    label: t('Customize columns'),
-    description: t('Further customize how to display each column'),
+    label: t('Настройка столбцов'),
+    description: t('Дальнейшая настройка отображения каждого столбца.'),
     width: 400,
     height: 320,
     renderTrigger: true,

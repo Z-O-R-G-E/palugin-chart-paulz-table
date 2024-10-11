@@ -6,12 +6,12 @@ export const colorPn: ControlSetItem = {
   name: 'colorPn',
   config: {
     type: 'CheckboxControl',
-    label: t('Color +/-'),
+    label: t('Цвет +/-'),
     renderTrigger: true,
     default: true,
     visibility: isStraightType,
     description: t(
-      'Whether to colorize numeric values by if they are positive or negative',
+      'Раскрашивать ли числовые значения в зависимости от того, являются ли они положительными или отрицательными',
     ),
   },
 };

@@ -12,10 +12,12 @@ export const serverPageLength: ControlSetItem = {
   config: {
     type: 'SelectControl',
     freeForm: true,
-    label: t('Server Page Length'),
+    label: t('Количество строк на странице (серверное)'),
     default: 10,
     choices: PAGE_SIZE_OPTIONS,
-    description: t('Rows per page, 0 means no pagination'),
+    description: t(
+      'Количество строк на странице, 0 означает отсутствие нумерации страниц.',
+    ),
     visibility: ({ controls }: ControlPanelsContainerProps) =>
       Boolean(controls?.serverPagination?.value) &&
       isStraightType({ controls }),

@@ -6,15 +6,14 @@ export const colSubtotalPosition: ControlSetItem = {
   name: 'colSubtotalPosition',
   config: {
     type: 'SelectControl',
-    label: t('Columns subtotal position'),
+    label: t('Позиция промежуточного итога столбцов'),
     visibility: isPivotType,
     default: false,
     choices: [
-      // [value, label]
-      [true, t('Left')],
-      [false, t('Right')],
+      [true, t('Лево')],
+      [false, t('Право')],
     ],
     renderTrigger: true,
-    description: t('Position of column level subtotal'),
+    description: t('Позиция промежуточного итога на уровне столбца'),
   },
 };

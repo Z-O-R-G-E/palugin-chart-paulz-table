@@ -6,9 +6,9 @@ export const orderDesc: ControlSetItem = {
   name: 'orderDesc',
   config: {
     type: 'CheckboxControl',
-    label: t('Sort Descending'),
+    label: t('Сортировать по убыванию'),
     visibility: isPivotType,
     default: true,
-    description: t('Whether to sort descending or ascending'),
+    description: t('Сортировать по убыванию или по возрастанию'),
   },
 };

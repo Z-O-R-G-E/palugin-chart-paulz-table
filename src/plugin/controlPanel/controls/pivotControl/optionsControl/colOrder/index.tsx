@@ -7,24 +7,32 @@ export const colOrder: ControlSetItem = {
   name: 'colOrder',
   config: {
     type: 'SelectControl',
-    label: t('Sort columns by'),
+    label: t('Сортировать столбцы по'),
     visibility: isPivotType,
     default: 'key_a_to_z',
     choices: [
       // [value, label]
-      ['key_a_to_z', t('key a-z')],
-      ['key_z_to_a', t('key z-a')],
-      ['value_a_to_z', t('value ascending')],
-      ['value_z_to_a', t('value descending')],
+      ['key_a_to_z', t('Ключ от А до Я')],
+      ['key_z_to_a', t('Ключ от Я до А')],
+      ['value_a_to_z', t('Значение по возрастанию')],
+      ['value_z_to_a', t('Значение по убыванию')],
     ],
     renderTrigger: true,
     description: (
       <>
-        <div>{t('Change order of columns.')}</div>
-        <div>{t('Available sorting modes:')}</div>
+        <div>{t('Изменить порядок столбцов.')}</div>
+        <div>{t('Доступные режимы сортировки:')}</div>
         <ul>
-          <li>{t('By key: use column names as sorting key')}</li>
-          <li>{t('By value: use metric values as sorting key')}</li>
+          <li>
+            {t(
+              'По ключу: используйте имена столбцов в качестве ключа сортировки.',
+            )}
+          </li>
+          <li>
+            {t(
+              'По значению: используйте значения показателей в качестве ключа сортировки.',
+            )}
+          </li>
         </ul>
       </>
     ),

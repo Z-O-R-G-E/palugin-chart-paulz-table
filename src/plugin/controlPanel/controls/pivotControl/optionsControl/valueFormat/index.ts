@@ -6,7 +6,7 @@ export const valueFormat: ControlSetItem = {
   name: 'valueFormat',
   config: {
     ...sharedControls.y_axis_format,
-    label: t('Value format'),
+    label: t('Формат значения'),
     visibility: isPivotType,
   },
 };

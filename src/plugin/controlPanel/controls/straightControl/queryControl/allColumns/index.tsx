@@ -14,7 +14,7 @@ export const allColumns: ControlSetItem = {
   config: {
     ...sharedControls.groupby,
     label: t('Columns'),
-    description: t('Columns to display'),
+    description: t('Столбцы для отображения'),
     multi: true,
     freeForm: true,
     allowAll: true,
@@ -28,7 +28,7 @@ export const allColumns: ControlSetItem = {
       externalValidationErrors:
         isRawMode({ controls }) &&
         ensureIsArray(controlState?.value).length === 0
-          ? [t('must have a value')]
+          ? [t('должно иметь значение')]
           : [],
     }),
     visibility: ({ controls }) => {

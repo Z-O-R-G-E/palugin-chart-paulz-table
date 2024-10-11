@@ -5,6 +5,7 @@ import {
   ControlState,
   Dataset,
   defineSavedMetrics,
+  sharedControls,
 } from '@superset-ui/chart-controls';
 
 import {
@@ -12,10 +13,13 @@ import {
   isStraightType,
   validateAggControlValues,
 } from '../../../../utils';
+import { t } from '@superset-ui/core';
 
 export const metrics: ControlSetItem = {
   name: 'metrics',
-  override: {
+  config: {
+    ...sharedControls.metrics,
+    label: t('Метрики'),
     validators: [],
     visibility: ({ controls }) => {
       return isAggMode({ controls }) && isStraightType({ controls });

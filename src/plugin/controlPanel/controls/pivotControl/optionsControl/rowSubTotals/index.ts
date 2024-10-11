@@ -6,10 +6,10 @@ export const rowSubTotals: ControlSetItem = {
   name: 'rowSubTotals',
   config: {
     type: 'CheckboxControl',
-    label: t('Show rows subtotal'),
+    label: t('Показать промежуточные итоги по строкам'),
     visibility: isPivotType,
     default: false,
     renderTrigger: true,
-    description: t('Display row level subtotal'),
+    description: t('Отображение промежуточного итога на уровне строки'),
   },
 };

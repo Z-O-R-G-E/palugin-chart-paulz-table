@@ -6,9 +6,9 @@ export const orderDesc: ControlSetItem = {
   name: 'orderDesc',
   config: {
     type: 'CheckboxControl',
-    label: t('Sort descending'),
+    label: t('Сортировать по убыванию'),
     default: true,
-    description: t('Whether to sort descending or ascending'),
+    description: t('Сортировать по убыванию или по возрастанию'),
     visibility: ({ controls }) => {
       return (
         (isAggMode({ controls }) && isStraightType({ controls })) ||

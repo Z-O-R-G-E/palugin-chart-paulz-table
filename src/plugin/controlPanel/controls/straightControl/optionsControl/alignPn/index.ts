@@ -6,12 +6,12 @@ export const alignPn: ControlSetItem = {
   name: 'alignPn',
   config: {
     type: 'CheckboxControl',
-    label: t('Align +/-'),
+    label: t('Выровнять +/-'),
     renderTrigger: true,
     default: false,
     visibility: isStraightType,
     description: t(
-      'Whether to align background charts with both positive and negative values at 0',
+      'Следует ли выравнивать фоновые диаграммы как с положительными, так и с отрицательными значениями в 0.',
     ),
   },
 };
