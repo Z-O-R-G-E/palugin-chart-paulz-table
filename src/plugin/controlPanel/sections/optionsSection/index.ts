@@ -1,26 +1,60 @@
 import { t } from '@superset-ui/core';
 import { ControlPanelSectionConfig } from '@superset-ui/chart-controls';
-
 import {
-  tableTimestampFormat,
-  pageLength,
-  includeSearch,
-  showCellBars,
+  aggregateFunction,
   alignPn,
-  colorPn,
   allowRearrangeColumns,
+  colOrder,
+  colorPn,
+  colSubtotalPosition,
+  colSubTotals,
+  colTotals,
   columnConfig,
+  combineMetric,
+  conditionalFormattingPivot,
+  conditionalFormattingStraight,
+  currencyFormat,
+  dateFormat,
+  includeSearch,
+  pageLength,
+  rowOrder,
+  rowSubtotalPosition,
+  rowSubTotals,
+  rowTotals,
+  showCellBars,
+  tableTimestampFormat,
+  transposePivot,
+  valueFormat,
 } from '../../controls';
 
 export const customizeSection: ControlPanelSectionConfig = {
   label: t('Настройки'),
   expanded: true,
   controlSetRows: [
+    /*Straight*/
     [tableTimestampFormat],
-    [pageLength, null],
+    [pageLength],
     [includeSearch, showCellBars],
     [alignPn, colorPn],
     [allowRearrangeColumns],
     [columnConfig],
+    [conditionalFormattingStraight],
+    /*Pivot*/
+    [aggregateFunction],
+    [rowTotals],
+    [rowSubTotals],
+    [colTotals],
+    [colSubTotals],
+    [transposePivot],
+    [combineMetric],
+    [valueFormat],
+    [currencyFormat],
+    [dateFormat],
+    [rowOrder],
+    [colOrder],
+    [rowSubtotalPosition],
+    [colSubtotalPosition],
+    [conditionalFormattingPivot],
+    /*General*/
   ],
 };
