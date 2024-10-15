@@ -2,10 +2,22 @@ import {
   ControlPanelConfig,
   getStandardizedControls,
 } from '@superset-ui/chart-controls';
-import { customizeSection, querySection, tableTypeSection } from './sections';
+import {
+  pivotOptionsSection,
+  pivotQuerySection,
+  straightOptionsSection,
+  straightQuerySection,
+  tableTypeSection,
+} from './sections';
 
 const config: ControlPanelConfig = {
-  controlPanelSections: [tableTypeSection, querySection, customizeSection],
+  controlPanelSections: [
+    tableTypeSection,
+    pivotQuerySection,
+    pivotOptionsSection,
+    straightQuerySection,
+    straightOptionsSection,
+  ],
   formDataOverrides: formData => ({
     ...formData,
     metrics: getStandardizedControls().popAllMetrics(),

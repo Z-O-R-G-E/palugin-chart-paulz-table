@@ -1,3 +1,3 @@
 export * from './tableTypeSection';
-export * from './querySection';
-export * from './optionsSection';
+export * from './pivot';
+export * from './straight';

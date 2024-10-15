@@ -1,3 +1,3 @@
-export * from './generalControl';
-export * from './straightControl';
-export * from './pivotControl';
+export * from './general';
+export * from './straight';
+export * from './pivot';
