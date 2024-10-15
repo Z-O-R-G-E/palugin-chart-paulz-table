@@ -3,7 +3,7 @@ import {
   ControlStateMapping,
 } from '@superset-ui/chart-controls';
 import { QueryFormColumn, ensureIsArray, t } from '@superset-ui/core';
-import { QueryMode } from '../../consts';
+import { QueryMode } from '../../../../consts';
 
 export function getQueryMode(controls: ControlStateMapping): QueryMode {
   const mode = controls?.queryMode?.value;

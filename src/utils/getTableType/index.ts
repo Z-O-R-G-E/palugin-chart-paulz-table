@@ -1,5 +1,5 @@
-import { PaulzTableFormData } from '../../../../types';
-import { TableType } from '../../../controlPanel/consts';
+import { TableType } from '../../consts';
+import { PaulzTableFormData } from '../../types';
 
 export function getTableType(formData: PaulzTableFormData): TableType {
   const { tableType: type } = formData;

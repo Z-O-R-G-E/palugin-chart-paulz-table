@@ -2,7 +2,7 @@ import {
   ControlPanelsContainerProps,
   ControlStateMapping,
 } from '@superset-ui/chart-controls';
-import { TableType } from '../../consts';
+import { TableType } from 'plugins/plugin-chart-paulz-table/src/consts';
 
 export function getTableType(controls: ControlStateMapping): TableType {
   const type = controls?.tableType?.value;

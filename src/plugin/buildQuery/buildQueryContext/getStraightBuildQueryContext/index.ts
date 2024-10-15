@@ -10,9 +10,20 @@ import {
   removeDuplicates,
 } from '@superset-ui/core';
 import { PaulzTableFormData } from '../../../../types';
-import { getQueryMode } from '../../utils';
-import { QueryMode } from '../../../controlPanel/consts';
+
 import { updateExternalFormData } from 'plugins/plugin-chart-paulz-table/src/utils';
+import { StraightTableFormData } from '../../../../types/StraightTableTypes';
+import { QueryMode } from '../../../../consts';
+
+export const getQueryMode = (formData: StraightTableFormData) => {
+  const { queryMode: mode } = formData;
+  if (mode === QueryMode.aggregate || mode === QueryMode.raw) {
+    return mode;
+  }
+  const rawColumns = formData?.allColumns;
+  const hasRawColumns = rawColumns && rawColumns.length > 0;
+  return hasRawColumns ? QueryMode.raw : QueryMode.aggregate;
+};
 
 export const getStraightBuildQueryContext: BuildQuery = (
   formData: PaulzTableFormData,

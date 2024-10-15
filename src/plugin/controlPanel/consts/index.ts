@@ -1,6 +1,6 @@
 import { formatSelectOptions } from '@superset-ui/chart-controls';
-import { Locale, addLocaleData } from '@superset-ui/core';
-import { t } from '@superset-ui/core';
+import { t, Locale, addLocaleData } from '@superset-ui/core';
+import { QueryMode, TableType } from '../../../consts';
 
 const en = {
   'Query Mode': [''],
@@ -48,20 +48,10 @@ export const translations: Partial<Record<Locale, typeof en>> = {
 
 addLocaleData(translations);
 
-export enum TableType {
-  straight = 'straight',
-  pivot = 'pivot',
-}
-
 export const TableTypeLabel = {
   [TableType.straight]: t('Прямая'),
   [TableType.pivot]: t('Сводная'),
 };
-
-export enum QueryMode {
-  aggregate = 'aggregate',
-  raw = 'raw',
-}
 
 export const QueryModeLabel = {
   [QueryMode.aggregate]: t('Агрегированные'),

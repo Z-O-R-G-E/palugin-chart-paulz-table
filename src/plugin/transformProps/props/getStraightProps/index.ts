@@ -10,7 +10,7 @@ import {
   ColorFormatters,
   getColorFormatters,
 } from '@superset-ui/chart-controls';
-import { QueryMode } from '../../../controlPanel/consts';
+import { QueryMode } from '../../../../consts';
 
 const memoizedProcessDataRecords = memoizeOne(processDataRecords);
 const memoizedProcessColumns = memoizeOne(processColumns, isEqualColumns);

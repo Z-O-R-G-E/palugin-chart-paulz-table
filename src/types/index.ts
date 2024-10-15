@@ -1,30 +1,31 @@
-import { DataRecord, PlainObject, QueryFormData } from '@superset-ui/core';
-import { TableType } from '../plugin/controlPanel/consts';
+import { DataRecord, QueryFormData } from '@superset-ui/core';
+
 import {
+  StraightTableFormData,
   StraightTableProps,
+  StraightTableStylesProps,
   StraightTableTransformedProps,
 } from './StraightTableTypes';
-import { PivotTableProps, PivotTableTransformedProps } from './PivotTableTypes';
-
-export type PaulzTableStylesProps = {
-  height: number;
-  width: number;
-};
-
-export type PaulzTableTransformedProps = StraightTableTransformedProps &
-  PivotTableTransformedProps;
+import {
+  PivotTableFormData,
+  PivotTableProps,
+  PivotTableStylesProps,
+  PivotTableTransformedProps,
+} from './PivotTableTypes';
+import { TableType } from '../consts';
 
 export type PaulzTableFormData = QueryFormData &
-  PaulzTableStylesProps &
-  PaulzTableTransformedProps & { tableType?: TableType };
+  PivotTableFormData &
+  StraightTableFormData & { tableType?: TableType };
+
+export type PaulzTableStylesProps = PivotTableStylesProps &
+  StraightTableStylesProps & {
+    height: number;
+    width: number;
+  };
+
+export type PaulzTableTransformedProps = PivotTableTransformedProps &
+  StraightTableTransformedProps;
 
 export type PaulzTableProps = PivotTableProps &
-  StraightTableProps &
-  PaulzTableStylesProps &
-  PaulzTableTransformedProps &
-  TableProps;
-
-export interface TableProps {
-  data: DataRecord[];
-  configs: PlainObject;
-}
+  StraightTableProps & { data: DataRecord[] };

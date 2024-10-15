@@ -16,78 +16,7 @@ import {
   TimeGranularity,
 } from '@superset-ui/core';
 import { ColorFormatters } from '@superset-ui/chart-controls';
-import { QueryMode } from '../../plugin/controlPanel/consts';
-
-export interface StraightTableStylesProps {}
-
-export interface StraightTableTransformedProps {
-  isRawRecords?: boolean;
-  totals?: DataRecord;
-  columns: DataColumnMeta[];
-  serverPagination: boolean;
-  metrics?: (keyof DataRecord)[];
-  percentMetrics?: QueryFormMetric[] | null;
-  serverPaginationData: { pageSize?: number; currentPage?: number };
-  setDataMask: SetDataMaskHook;
-  alignPositiveNegative?: boolean;
-  colorPositiveNegative?: boolean;
-  showCellBars?: boolean;
-  sortDesc?: boolean;
-  includeSearch?: boolean;
-  rowCount?: number;
-  pageSize?: number;
-  filters?: DataRecordFilters;
-  emitCrossFilters?: boolean;
-  onChangeFilter?: ChartProps['hooks']['onAddFilter'];
-  columnColorFormatters?: ColorFormatters;
-  timeGrain?: TimeGranularity;
-  allowRearrangeColumns?: boolean;
-  onContextMenu?: (
-    clientX: number,
-    clientY: number,
-    filters?: ContextMenuFilters,
-  ) => void;
-}
-
-export type StraightTableCustomizeProps = {
-  tableTimestampFormat?: string;
-  pageLength?: string | number | null;
-  includeSearch?: boolean;
-  showCellBars?: boolean;
-  alignPn?: boolean;
-  colorPn?: boolean;
-  allowRearrangeColumns?: boolean;
-  columnConfig?: Record<string, TableColumnConfig>;
-  conditionalFormatting?: ColorFormatters;
-};
-
-export type StraightTableFormData = QueryFormData &
-  StraightTableCustomizeProps &
-  StraightTableStylesProps & {
-    queryMode?: QueryMode;
-    groupby?: QueryFormMetric[] | null;
-    timeGrainSqla?: TimeGranularity;
-    metrics?: QueryFormMetric[] | null;
-    allColumns?: QueryFormMetric[] | null;
-    percentMetrics?: QueryFormMetric[] | null;
-    timeseriesLimitMetric?: QueryFormMetric[] | QueryFormMetric | null;
-    orderByCols?: string;
-    serverPagination: boolean;
-    rowLimit?: number;
-    serverPageLength?: number;
-    orderDesc?: boolean;
-    showTotals?: boolean;
-  };
-
-export type StraightTableProps = ChartProps &
-  StraightTableStylesProps & {
-    ownCurrentState?: {
-      pageSize?: number;
-      currentPage?: number;
-    };
-    rawFormData: StraightTableFormData;
-    queriesData: ChartDataResponseResult[];
-  };
+import { QueryMode } from '../../consts';
 
 export type CustomFormatter = (value: DataRecordValue) => string;
 
@@ -118,3 +47,74 @@ export interface DataColumnMeta {
   isNumeric?: boolean;
   config?: TableColumnConfig;
 }
+
+/*-----------------------------------------*/
+
+export type StraightTableOptionsProps = {
+  tableTimestampFormat?: string;
+  pageLength?: string | number | null;
+  includeSearch?: boolean;
+  showCellBars?: boolean;
+  alignPn?: boolean;
+  colorPn?: boolean;
+  allowRearrangeColumns?: boolean;
+  columnConfig?: Record<string, TableColumnConfig>;
+  conditionalFormatting?: ColorFormatters;
+};
+
+export type StraightTableFormData = QueryFormData &
+  StraightTableOptionsProps & {
+    queryMode?: QueryMode;
+    groupby?: QueryFormMetric[] | null;
+    timeGrainSqla?: TimeGranularity;
+    metrics?: QueryFormMetric[] | null;
+    allColumns?: QueryFormMetric[] | null;
+    percentMetrics?: QueryFormMetric[] | null;
+    timeseriesLimitMetric?: QueryFormMetric[] | QueryFormMetric | null;
+    orderByCols?: string;
+    serverPagination?: boolean;
+    rowLimit?: number;
+    serverPageLength?: number;
+    orderDesc?: boolean;
+    showTotals?: boolean;
+  };
+
+export interface StraightTableStylesProps {}
+
+export interface StraightTableTransformedProps {
+  isRawRecords?: boolean;
+  totals?: DataRecord;
+  columns?: DataColumnMeta[];
+  serverPagination?: boolean;
+  metrics?: (keyof DataRecord)[];
+  percentMetrics?: QueryFormMetric[] | null;
+  serverPaginationData?: { pageSize?: number; currentPage?: number };
+  setDataMask?: SetDataMaskHook;
+  alignPositiveNegative?: boolean;
+  colorPositiveNegative?: boolean;
+  showCellBars?: boolean;
+  sortDesc?: boolean;
+  includeSearch?: boolean;
+  rowCount?: number;
+  pageSize?: number;
+  filters?: DataRecordFilters;
+  emitCrossFilters?: boolean;
+  onChangeFilter?: ChartProps['hooks']['onAddFilter'];
+  columnColorFormatters?: ColorFormatters;
+  timeGrain?: TimeGranularity;
+  allowRearrangeColumns?: boolean;
+  onContextMenu?: (
+    clientX: number,
+    clientY: number,
+    filters?: ContextMenuFilters,
+  ) => void;
+}
+
+export type StraightTableProps = ChartProps & {
+  ownCurrentState?: {
+    pageSize?: number;
+    currentPage?: number;
+  };
+  rawFormData?: StraightTableFormData;
+  queriesData?: ChartDataResponseResult[];
+};

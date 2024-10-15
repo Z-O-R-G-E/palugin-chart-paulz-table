@@ -1,7 +1,8 @@
 import { ControlSetItem } from '@superset-ui/chart-controls';
 import { t } from '@superset-ui/core';
-import { QueryMode, QueryModeLabel } from '../../../../consts';
+import { QueryModeLabel } from '../../../../consts';
 import { getQueryMode } from '../../../../utils';
+import { QueryMode } from '../../../../../../consts';
 
 export const queryMode: ControlSetItem = {
   name: 'queryMode',

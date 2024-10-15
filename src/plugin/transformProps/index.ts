@@ -1,16 +1,17 @@
+import { TableType } from '../../consts';
 import {
   PaulzTableFormData,
   PaulzTableProps,
   PaulzTableTransformedProps,
 } from '../../types';
-import { getTableType } from '../buildQuery/utils';
-import { TableType } from '../controlPanel/consts';
-import { getPivotProps, getStraightProps } from './utils';
+import { getTableType } from '../../utils';
+import { getPivotProps, getStraightProps } from './props';
 
 const transformProps = (chartProps: PaulzTableProps) => {
   const { formData } = chartProps;
 
   const tableType = getTableType(formData as PaulzTableFormData);
+
   if (tableType === TableType.straight) {
     return getStraightProps(chartProps);
   }

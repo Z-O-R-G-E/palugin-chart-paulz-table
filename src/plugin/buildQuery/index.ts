@@ -4,10 +4,10 @@ import { PaulzTableFormData } from '../../types';
 import {
   getPivotBuildQueryContext,
   getStraightBuildQueryContext,
-  getTableType,
-} from './utils';
-import { TableType } from '../controlPanel/consts';
+} from './buildQueryContext';
 import { QueryContext } from '@superset-ui/core';
+import { getTableType } from '../../utils';
+import { TableType } from '../../consts';
 
 const buildQuery: BuildQuery = (formData: PaulzTableFormData, options) => {
   const tableType = getTableType(formData);

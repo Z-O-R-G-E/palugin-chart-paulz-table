@@ -9,7 +9,7 @@ const PaulzTable = (props: PaulzTableProps) => {
 
   return (
     <div ref={rootElem} style={{ width: width, height: height }}>
-      <Table {...props} />
+      <Table />
     </div>
   );
 };

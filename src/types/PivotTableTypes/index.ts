@@ -13,45 +13,19 @@ import {
   TimeGranularity,
 } from '@superset-ui/core';
 import { ColorFormatters } from '@superset-ui/chart-controls';
+import { MetricsLayoutEnum } from '../../consts';
 
-export interface PivotTableStylesProps {}
+export type DateFormatter =
+  | TimeFormatter
+  | NumberFormatter
+  | ((value: DataRecordValue) => string);
 
-export interface PivotTableTransformedProps {
-  groupbyRows: QueryFormColumn[];
-  groupbyColumns: QueryFormColumn[];
-  metrics: QueryFormMetric[];
-  tableRenderer: string;
-  colOrder: string;
-  rowOrder: string;
-  aggregateFunction: string;
-  transposePivot: boolean;
-  combineMetric: boolean;
-  rowSubtotalPosition: boolean;
-  colSubtotalPosition: boolean;
-  colTotals: boolean;
-  colSubTotals: boolean;
-  rowTotals: boolean;
-  rowSubTotals: boolean;
-  valueFormat: string;
-  currencyFormat: Currency;
-  emitCrossFilters?: boolean;
-  setDataMask: SetDataMaskHook;
-  selectedFilters?: SelectedFiltersType;
-  verboseMap: JsonObject;
-  columnFormats: JsonObject;
-  currencyFormats: Record<string, Currency>;
-  metricsLayout?: MetricsLayoutEnum;
-  metricColorFormatters: ColorFormatters;
-  dateFormatters: Record<string, DateFormatter | undefined>;
-  onContextMenu?: (
-    clientX: number,
-    clientY: number,
-    filters?: ContextMenuFilters,
-  ) => void;
-  timeGrainSqla?: TimeGranularity;
-}
+export type FilterType = Record<string, DataRecordValue>;
+export type SelectedFiltersType = Record<string, DataRecordValue[]>;
 
-export type PivotTableCustomizeProps = {
+/*-----------------------------------------*/
+
+export type PivotTableOptionsProps = {
   aggregateFunction?: boolean;
   rowTotals?: boolean;
   rowSubTotals?: boolean;
@@ -68,9 +42,8 @@ export type PivotTableCustomizeProps = {
   conditionalFormatting?: ColorFormatters;
 };
 
-export type PivotTableFormData = PivotTableStylesProps &
-  QueryFormData &
-  PivotTableCustomizeProps & {
+export type PivotTableFormData = QueryFormData &
+  PivotTableOptionsProps & {
     groupbyColumns?: QueryFormColumn[];
     groupbyRows?: QueryFormColumn[];
     timeGrainSqla?: TimeGranularity;
@@ -81,17 +54,41 @@ export type PivotTableFormData = PivotTableStylesProps &
     orderDesc?: boolean;
   };
 
-export type PivotTableProps = ChartProps & PivotTableStylesProps;
+export interface PivotTableStylesProps {}
 
-export enum MetricsLayoutEnum {
-  ROWS = 'ROWS',
-  COLUMNS = 'COLUMNS',
+export interface PivotTableTransformedProps {
+  groupbyRows?: QueryFormColumn[];
+  groupbyColumns?: QueryFormColumn[];
+  metrics?: QueryFormMetric[];
+  tableRenderer?: string;
+  colOrder?: string;
+  rowOrder?: string;
+  aggregateFunction?: string;
+  transposePivot?: boolean;
+  combineMetric?: boolean;
+  rowSubtotalPosition?: boolean;
+  colSubtotalPosition?: boolean;
+  colTotals?: boolean;
+  colSubTotals?: boolean;
+  rowTotals?: boolean;
+  rowSubTotals?: boolean;
+  valueFormat?: string;
+  currencyFormat?: Currency;
+  emitCrossFilters?: boolean;
+  setDataMask?: SetDataMaskHook;
+  selectedFilters?: SelectedFiltersType;
+  verboseMap?: JsonObject;
+  columnFormats?: JsonObject;
+  currencyFormats?: Record<string, Currency>;
+  metricsLayout?: MetricsLayoutEnum;
+  metricColorFormatters?: ColorFormatters;
+  dateFormatters?: Record<string, DateFormatter | undefined>;
+  onContextMenu?: (
+    clientX: number,
+    clientY: number,
+    filters?: ContextMenuFilters,
+  ) => void;
+  timeGrainSqla?: TimeGranularity;
 }
 
-export type DateFormatter =
-  | TimeFormatter
-  | NumberFormatter
-  | ((value: DataRecordValue) => string);
-
-export type FilterType = Record<string, DataRecordValue>;
-export type SelectedFiltersType = Record<string, DataRecordValue[]>;
+export type PivotTableProps = ChartProps;

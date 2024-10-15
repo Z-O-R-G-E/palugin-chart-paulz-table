@@ -1,7 +1,8 @@
 import { ControlConfig, ControlSetItem } from '@superset-ui/chart-controls';
 import { t } from '@superset-ui/core';
-import { TableType, TableTypeLabel } from '../../../../consts';
 import { getTableType } from '../../../../utils';
+import { TableType } from '../../../../../../consts';
+import { TableTypeLabel } from '../../../../consts';
 
 export const tableType: ControlSetItem = {
   name: 'tableType',

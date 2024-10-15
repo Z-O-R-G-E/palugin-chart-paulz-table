@@ -1,6 +1,6 @@
 import { ControlSetItem } from '@superset-ui/chart-controls';
 import { t } from '@superset-ui/core';
-import { MetricsLayoutEnum } from '../../../../../../types/PivotTableTypes';
+import { MetricsLayoutEnum } from '../../../../../../consts';
 
 export const metricsLayout: ControlSetItem = {
   name: 'metricsLayout',
