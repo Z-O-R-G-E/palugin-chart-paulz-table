@@ -5,9 +5,9 @@ export const colSubTotals: ControlSetItem = {
   name: 'colSubTotals',
   config: {
     type: 'CheckboxControl',
-    label: t('Показать промежуточный итог столбцов'),
+    label: t('Показать промежуточный итог по столбцам'),
     default: false,
     renderTrigger: true,
-    description: t('Отобразить промежуточный итог на уровне столбца'),
+    description: t('Отображать промежуточный итог по столбцам'),
   },
 };

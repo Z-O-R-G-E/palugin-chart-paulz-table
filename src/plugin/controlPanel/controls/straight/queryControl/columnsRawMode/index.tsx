@@ -9,11 +9,11 @@ import { ensureIsArray, t } from '@superset-ui/core';
 
 import { getQueryMode, isRawMode } from '../../../../utils';
 
-export const allColumns: ControlSetItem = {
-  name: 'allColumns',
+export const columnsRawMode: ControlSetItem = {
+  name: 'columnsRawMode',
   config: {
     ...sharedControls.groupby,
-    label: t('Columns'),
+    label: t('Столбцы'),
     description: t('Столбцы для отображения'),
     multi: true,
     freeForm: true,

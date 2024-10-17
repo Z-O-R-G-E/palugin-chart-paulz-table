@@ -5,7 +5,7 @@ export const transposePivot: ControlSetItem = {
   name: 'transposePivot',
   config: {
     type: 'CheckboxControl',
-    label: t('Транспонировать точку поворота'),
+    label: t('Транспонировать таблицу'),
     default: false,
     description: t('Поменять местами строки и столбцы'),
     renderTrigger: true,

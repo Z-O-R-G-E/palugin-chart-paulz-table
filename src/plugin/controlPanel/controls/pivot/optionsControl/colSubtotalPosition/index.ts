@@ -5,13 +5,13 @@ export const colSubtotalPosition: ControlSetItem = {
   name: 'colSubtotalPosition',
   config: {
     type: 'SelectControl',
-    label: t('Позиция промежуточного итога столбцов'),
+    label: t('Расположение столбцов подытогов'),
     default: false,
     choices: [
-      [true, t('Лево')],
-      [false, t('Право')],
+      [true, t('Слева')],
+      [false, t('Справа')],
     ],
     renderTrigger: true,
-    description: t('Позиция промежуточного итога на уровне столбца'),
+    description: t('Расположение промежуточного итога на уровне столбца'),
   },
 };

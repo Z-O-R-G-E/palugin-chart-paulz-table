@@ -13,7 +13,7 @@ import {
 const config: ControlPanelConfig = {
   controlPanelSections: [
     tableTypeSection,
-    pivotQuerySection,
+    ...pivotQuerySection,
     pivotOptionsSection,
     straightQuerySection,
     straightOptionsSection,

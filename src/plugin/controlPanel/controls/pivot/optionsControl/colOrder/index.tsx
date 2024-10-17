@@ -9,9 +9,8 @@ export const colOrder: ControlSetItem = {
     label: t('Сортировать столбцы по'),
     default: 'key_a_to_z',
     choices: [
-      // [value, label]
-      ['key_a_to_z', t('Ключ от А до Я')],
-      ['key_z_to_a', t('Ключ от Я до А')],
+      ['key_a_to_z', t('По алфавиту А-Я')],
+      ['key_z_to_a', t('По алфавиту Я-А')],
       ['value_a_to_z', t('Значение по возрастанию')],
       ['value_z_to_a', t('Значение по убыванию')],
     ],

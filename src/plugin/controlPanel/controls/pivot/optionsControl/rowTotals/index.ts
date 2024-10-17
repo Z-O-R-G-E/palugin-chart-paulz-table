@@ -5,9 +5,9 @@ export const rowTotals: ControlSetItem = {
   name: 'rowTotals',
   config: {
     type: 'CheckboxControl',
-    label: t('Показать общее количество строк'),
+    label: t('Показать общий итог по строкам'),
     default: false,
     renderTrigger: true,
-    description: t('Отображать итог на уровне строки'),
+    description: t('Отображать общий итог по строке'),
   },
 };

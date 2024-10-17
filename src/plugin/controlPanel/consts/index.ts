@@ -4,6 +4,8 @@ import {
   Locale,
   addLocaleData,
   smartDateFormatter,
+  NumberFormats,
+  getNumberFormatter,
 } from '@superset-ui/core';
 import { QueryMode, TableType } from '../../../consts';
 
@@ -81,3 +83,29 @@ export const D3_TIME_FORMAT_OPTIONS: [string, string][] = [
   ['%d-%m-%Y %H:%M:%S', '%d-%m-%Y %H:%M:%S | 14-01-2019 01:32:10'],
   ['%H:%M:%S', '%H:%M:%S | 01:32:10'],
 ];
+
+const d3Formatted: [string, string][] = [
+  ',d',
+  '.1s',
+  '.3s',
+  ',.1%',
+  '.2%',
+  '.3%',
+  '.4r',
+  ',.1f',
+  ',.2f',
+  ',.3f',
+  '+,',
+  '$,.2f',
+].map(fmt => [fmt, `${fmt} (${getNumberFormatter(fmt).preview()})`]);
+
+export const D3_FORMAT_OPTIONS: [string, string][] = [
+  [NumberFormats.SMART_NUMBER, t('Адаптивное форматирование')],
+  ['~g', t('Исходное значение')],
+  ...d3Formatted,
+  ['DURATION', t('Продолжительность в мс (66000 => 1m 6s)')],
+  ['DURATION_SUB', t('Продолжительность в мс (1.40008 => 1ms 400µs 80ns)')],
+];
+
+export const DEFAULT_NUMBER_FORMAT = D3_FORMAT_OPTIONS[0][0];
+export const DEFAULT_TIME_FORMAT = D3_TIME_FORMAT_OPTIONS[0][0];

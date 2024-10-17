@@ -5,9 +5,9 @@ export const rowSubTotals: ControlSetItem = {
   name: 'rowSubTotals',
   config: {
     type: 'CheckboxControl',
-    label: t('Показать промежуточные итоги по строкам'),
+    label: t('Показать промежуточный итог по строке'),
     default: false,
     renderTrigger: true,
-    description: t('Отображение промежуточного итога на уровне строки'),
+    description: t('Отображать промежуточный итог по строке'),
   },
 };

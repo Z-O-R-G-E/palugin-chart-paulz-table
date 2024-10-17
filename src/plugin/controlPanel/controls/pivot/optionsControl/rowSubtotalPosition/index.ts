@@ -5,13 +5,13 @@ export const rowSubtotalPosition: ControlSetItem = {
   name: 'rowSubtotalPosition',
   config: {
     type: 'SelectControl',
-    label: t('Промежуточный итог по строкам'),
+    label: t('Расположение строк подытогов'),
     default: false,
     choices: [
       [true, t('Сверху')],
       [false, t('Снизу')],
     ],
     renderTrigger: true,
-    description: t('Позиция промежуточного итога уровня'),
+    description: t('Расположение промежуточного итога на уровне строки'),
   },
 };

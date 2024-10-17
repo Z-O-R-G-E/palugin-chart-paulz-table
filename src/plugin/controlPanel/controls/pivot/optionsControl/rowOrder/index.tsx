@@ -9,10 +9,10 @@ export const rowOrder: ControlSetItem = {
     label: t('Сортировать строки по'),
     default: 'key_a_to_z',
     choices: [
-      ['key_a_to_z', t('ключ от А до Я')],
-      ['key_z_to_a', t('ключ от Я до А')],
-      ['value_a_to_z', t('значение по возрастанию')],
-      ['value_z_to_a', t('значение по убыванию')],
+      ['key_a_to_z', t('По алфавиту А-Я')],
+      ['key_z_to_a', t('По алфавиту Я-А')],
+      ['value_a_to_z', t('Значение по возрастанию')],
+      ['value_z_to_a', t('Значение по убыванию')],
     ],
     renderTrigger: true,
     description: (

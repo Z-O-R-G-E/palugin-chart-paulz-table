@@ -5,9 +5,9 @@ export const colTotals: ControlSetItem = {
   name: 'colTotals',
   config: {
     type: 'CheckboxControl',
-    label: t('Показать общее количество столбцов'),
+    label: t('Показать общий итог по столбцам'),
     default: false,
     renderTrigger: true,
-    description: t('Отображение итогового уровня столбца'),
+    description: t('Отображать общий итог по столбцам'),
   },
 };
