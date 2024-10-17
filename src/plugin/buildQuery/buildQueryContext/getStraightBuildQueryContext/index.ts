@@ -20,7 +20,7 @@ export const getQueryMode = (formData: StraightTableFormData) => {
   if (mode === QueryMode.aggregate || mode === QueryMode.raw) {
     return mode;
   }
-  const rawColumns = formData?.allColumns;
+  const rawColumns = formData?.columnsRawMode;
   const hasRawColumns = rawColumns && rawColumns.length > 0;
   return hasRawColumns ? QueryMode.raw : QueryMode.aggregate;
 };

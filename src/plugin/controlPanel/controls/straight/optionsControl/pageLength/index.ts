@@ -11,7 +11,7 @@ export const pageLength: ControlSetItem = {
     type: 'SelectControl',
     freeForm: true,
     renderTrigger: true,
-    label: t('Длина страницы'),
+    label: t('Размер страницы'),
     default: null,
     choices: PAGE_SIZE_OPTIONS,
     description: t(

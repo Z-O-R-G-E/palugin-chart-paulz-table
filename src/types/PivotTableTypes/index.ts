@@ -2,6 +2,7 @@ import {
   ChartProps,
   ContextMenuFilters,
   Currency,
+  DataRecord,
   DataRecordValue,
   JsonObject,
   NumberFormatter,
@@ -57,6 +58,7 @@ export type PivotTableFormData = QueryFormData &
 export interface PivotTableStylesProps {}
 
 export interface PivotTableTransformedProps {
+  data: DataRecord[];
   groupbyRows?: QueryFormColumn[];
   groupbyColumns?: QueryFormColumn[];
   metrics?: QueryFormMetric[];

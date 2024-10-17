@@ -1,15 +1,13 @@
-import {
-  ControlSetItem,
-  D3_TIME_FORMAT_OPTIONS,
-} from '@superset-ui/chart-controls';
+import { ControlSetItem } from '@superset-ui/chart-controls';
 import { smartDateFormatter, t } from '@superset-ui/core';
+import { D3_TIME_FORMAT_OPTIONS } from '../../../../consts';
 
 export const tableTimestampFormat: ControlSetItem = {
   name: 'tableTimestampFormat',
   config: {
     type: 'SelectControl',
     freeForm: true,
-    label: t('Формат временной метки'),
+    label: t('Формат даты и времени'),
     default: smartDateFormatter.id,
     renderTrigger: true,
     clearable: false,

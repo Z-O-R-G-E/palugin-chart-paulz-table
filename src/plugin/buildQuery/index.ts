@@ -11,6 +11,7 @@ import { TableType } from '../../consts';
 
 const buildQuery: BuildQuery = (formData: PaulzTableFormData, options) => {
   const tableType = getTableType(formData);
+  console.log('BuildQuery', formData);
   if (tableType === TableType.straight) {
     return getStraightBuildQueryContext(formData, options);
   }

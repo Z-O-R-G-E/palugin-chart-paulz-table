@@ -10,7 +10,7 @@ export function getQueryMode(controls: ControlStateMapping): QueryMode {
   if (mode === QueryMode.aggregate || mode === QueryMode.raw) {
     return mode as QueryMode;
   }
-  const rawColumns = controls?.allColumns?.value as
+  const rawColumns = controls?.columnsRawMode?.value as
     | QueryFormColumn[]
     | undefined;
   const hasRawColumns = rawColumns && rawColumns.length > 0;

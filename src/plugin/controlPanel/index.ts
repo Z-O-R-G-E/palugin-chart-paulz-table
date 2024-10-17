@@ -21,7 +21,7 @@ const config: ControlPanelConfig = {
   formDataOverrides: formData => ({
     ...formData,
     metrics: getStandardizedControls().popAllMetrics(),
-    groupby: getStandardizedControls().popAllColumns(),
+    dimension: getStandardizedControls().popAllColumns(),
   }),
 };
 

@@ -15,7 +15,7 @@ export const percentMetrics: ControlSetItem = {
   name: 'percentMetrics',
   config: {
     ...sharedControls.metrics,
-    label: t('Процентные показатели'),
+    label: t('Процентные меры'),
     description: t(
       'Метрики, для которых должен отображаться процент от общего числа. Рассчитывается только на основе данных, находящихся в пределах строки.',
     ),
@@ -31,13 +31,13 @@ export const percentMetrics: ControlSetItem = {
         datasourceType: datasource?.type,
         queryMode: getQueryMode(controls),
         externalValidationErrors: validateAggControlValues(controls, [
-          controls.groupby?.value,
+          controls.dimension?.value,
           controls.metrics?.value,
           controlState?.value,
         ]),
       };
     },
-    rerender: ['groupby', 'metrics'],
+    rerender: ['dimension', 'metrics'],
     default: [],
     validators: [],
   } as typeof sharedControls.metrics,

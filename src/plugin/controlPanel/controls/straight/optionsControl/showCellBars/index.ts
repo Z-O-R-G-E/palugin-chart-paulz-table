@@ -5,9 +5,9 @@ export const showCellBars: ControlSetItem = {
   name: 'showCellBars',
   config: {
     type: 'CheckboxControl',
-    label: t('Клеточные бары'),
+    label: t('Гистограммы в ячейках'),
     renderTrigger: true,
     default: true,
-    description: t('Отображать ли фон гистограммы в столбцах таблицы'),
+    description: t('Отображать гистограммы в колонках таблицы'),
   },
 };

@@ -5,11 +5,11 @@ export const colorPn: ControlSetItem = {
   name: 'colorPn',
   config: {
     type: 'CheckboxControl',
-    label: t('Цвет +/-'),
+    label: t('Раскрасить +/-'),
     renderTrigger: true,
     default: true,
     description: t(
-      'Раскрашивать ли числовые значения в зависимости от того, являются ли они положительными или отрицательными',
+      'Раскрашивать числовые значения в зависимости от того, являются ли они положительными или отрицательными',
     ),
   },
 };

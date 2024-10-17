@@ -13,13 +13,13 @@ export const timeGrainSqla: ControlSetItem = {
     label: t('Гранулярность времени SQLa'),
     visibility: ({ controls }) => {
       const dttmLookup = Object.fromEntries(
-        ensureIsArray(controls?.groupby?.options).map(option => [
+        ensureIsArray(controls?.dimension?.options).map(option => [
           option.column_name,
           option.is_dttm,
         ]),
       );
 
-      return ensureIsArray(controls?.groupby.value)
+      return ensureIsArray(controls?.dimension.value)
         .map(selection => {
           if (isAdhocColumn(selection)) {
             return true;

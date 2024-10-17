@@ -99,6 +99,7 @@ export function getPivotProps(
   const metricColorFormatters = getColorFormatters(conditionalFormatting, data);
 
   return {
+    data,
     groupbyRows,
     groupbyColumns,
     metrics,

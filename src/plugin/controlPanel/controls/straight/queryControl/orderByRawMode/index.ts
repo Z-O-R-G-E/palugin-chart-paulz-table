@@ -3,8 +3,8 @@ import { t } from '@superset-ui/core';
 
 import { isRawMode } from '../../../../utils';
 
-export const orderByCols: ControlSetItem = {
-  name: 'orderByCols',
+export const orderByRawMode: ControlSetItem = {
+  name: 'orderByRawMode',
   config: {
     type: 'SelectControl',
     label: t('Сортировка'),

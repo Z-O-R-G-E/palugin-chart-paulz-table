@@ -65,13 +65,13 @@ export type StraightTableOptionsProps = {
 export type StraightTableFormData = QueryFormData &
   StraightTableOptionsProps & {
     queryMode?: QueryMode;
-    groupby?: QueryFormMetric[] | null;
+    dimension?: QueryFormMetric[] | null;
     timeGrainSqla?: TimeGranularity;
     metrics?: QueryFormMetric[] | null;
-    allColumns?: QueryFormMetric[] | null;
+    columnsRawMode?: QueryFormMetric[] | null;
     percentMetrics?: QueryFormMetric[] | null;
-    timeseriesLimitMetric?: QueryFormMetric[] | QueryFormMetric | null;
-    orderByCols?: string;
+    orderByAggMode?: QueryFormMetric[] | QueryFormMetric | null;
+    orderByRawMode?: string;
     serverPagination?: boolean;
     rowLimit?: number;
     serverPageLength?: number;
@@ -82,6 +82,7 @@ export type StraightTableFormData = QueryFormData &
 export interface StraightTableStylesProps {}
 
 export interface StraightTableTransformedProps {
+  data: DataRecord[];
   isRawRecords?: boolean;
   totals?: DataRecord;
   columns?: DataColumnMeta[];

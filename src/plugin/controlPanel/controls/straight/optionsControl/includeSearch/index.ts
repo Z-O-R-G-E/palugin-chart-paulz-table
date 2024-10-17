@@ -5,7 +5,7 @@ export const includeSearch: ControlSetItem = {
   name: 'includeSearch',
   config: {
     type: 'CheckboxControl',
-    label: t('Поле поиска'),
+    label: t('Строка поиска'),
     renderTrigger: true,
     default: false,
     description: t('Включить ли окно поиска на стороне клиента'),

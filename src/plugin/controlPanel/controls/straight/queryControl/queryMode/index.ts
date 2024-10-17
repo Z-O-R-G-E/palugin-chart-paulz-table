@@ -8,13 +8,13 @@ export const queryMode: ControlSetItem = {
   name: 'queryMode',
   config: {
     type: 'RadioButtonControl',
-    label: t('Тип запроса'),
+    label: t('Режим запроса'),
     default: null,
     options: [
       [QueryMode.aggregate, QueryModeLabel[QueryMode.aggregate]],
       [QueryMode.raw, QueryModeLabel[QueryMode.raw]],
     ],
     mapStateToProps: ({ controls }) => ({ value: getQueryMode(controls) }),
-    rerender: ['allColumns', 'groupby', 'metrics', 'percentMetrics'],
+    rerender: ['columnsRawMode', 'dimension', 'metrics', 'percentMetrics'],
   },
 };

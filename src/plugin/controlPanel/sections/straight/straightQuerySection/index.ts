@@ -2,10 +2,10 @@ import { ControlPanelSectionConfig } from '@superset-ui/chart-controls';
 import { t } from '@superset-ui/core';
 import {
   adhocFilters,
-  allColumns,
-  groupby,
+  columnsRawMode,
+  dimension,
   metricsStraight,
-  orderByCols,
+  orderByRawMode,
   orderDesc,
   percentMetrics,
   queryMode,
@@ -15,7 +15,7 @@ import {
   showTotals,
   temporalColumnsLookup,
   timeGrainSqlaStraight,
-  timeseriesLimitMetric,
+  orderByAggMode,
 } from '../../../controls';
 import { isStraightType } from '../../../utils';
 
@@ -25,17 +25,15 @@ export const straightQuerySection: ControlPanelSectionConfig = {
   visibility: ({ controls }) => isStraightType({ controls }),
   controlSetRows: [
     [queryMode],
-    [groupby],
-    [timeGrainSqlaStraight],
-    [metricsStraight, allColumns],
+    [dimension],
+    [timeGrainSqlaStraight, temporalColumnsLookup],
+    [metricsStraight, columnsRawMode],
     [percentMetrics],
-    [timeseriesLimitMetric, orderByCols],
+    [adhocFilters],
+    [orderByAggMode, orderByRawMode],
     [serverPagination],
     [rowLimitStraight, serverPageLength],
-    [showTotals],
-    /*general*/
-    [temporalColumnsLookup],
-    [adhocFilters],
     [orderDesc],
+    [showTotals],
   ],
 };

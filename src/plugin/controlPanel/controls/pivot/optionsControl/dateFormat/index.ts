@@ -1,8 +1,6 @@
-import {
-  ControlSetItem,
-  D3_TIME_FORMAT_OPTIONS,
-} from '@superset-ui/chart-controls';
+import { ControlSetItem } from '@superset-ui/chart-controls';
 import { smartDateFormatter, t } from '@superset-ui/core';
+import { D3_TIME_FORMAT_OPTIONS } from '../../../../consts';
 
 export const dateFormat: ControlSetItem = {
   name: 'dateFormat',

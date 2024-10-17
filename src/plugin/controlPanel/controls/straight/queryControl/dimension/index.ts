@@ -7,11 +7,14 @@ import {
 import { isAggMode, validateAggControlValues } from '../../../../utils';
 import { t } from '@superset-ui/core';
 
-export const groupby: ControlSetItem = {
-  name: 'groupby',
+export const dimension: ControlSetItem = {
+  name: 'dimension',
   config: {
     ...sharedControls.groupby,
-    label: t('Группировать по'),
+    label: t('Измерения'),
+    description: t(
+      'Измерения содержат качественные значения, такие как имена, даты или географические данные. Используйте измерения, чтобы классифицировать, сегментировать и раскрывать детали ваших данных. Размеры влияют на уровень детализации вида.',
+    ),
     visibility: ({ controls }) => {
       return isAggMode({ controls });
     },

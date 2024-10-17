@@ -15,7 +15,10 @@ export const metrics: ControlSetItem = {
   name: 'metrics',
   config: {
     ...sharedControls.metrics,
-    label: t('Метрики'),
+    label: t('Меры'),
+    description: t(
+      'Выберите один или несколько показателей для отображения. Вы можете использовать функцию агрегирования для столбца или написать собственный SQL для создания метрики.',
+    ),
     validators: [],
     visibility: ({ controls }) => {
       return isAggMode({ controls });
@@ -35,11 +38,11 @@ export const metrics: ControlSetItem = {
         form_data.metrics || (form_data.metric ? [form_data.metric] : []),
       datasource,
       externalValidationErrors: validateAggControlValues(controls, [
-        controls.groupby?.value,
+        controls.dimension?.value,
         controls.percentMetrics?.value,
         controlState.value,
       ]),
     }),
-    rerender: ['groupby', 'percentMetrics'],
+    rerender: ['dimension', 'percentMetrics'],
   },
 };

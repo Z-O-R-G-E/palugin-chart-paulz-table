@@ -11,7 +11,7 @@ export const serverPageLength: ControlSetItem = {
   config: {
     type: 'SelectControl',
     freeForm: true,
-    label: t('Количество строк на странице (серверное)'),
+    label: t('Серверный размер страницы'),
     default: 10,
     choices: PAGE_SIZE_OPTIONS,
     description: t(

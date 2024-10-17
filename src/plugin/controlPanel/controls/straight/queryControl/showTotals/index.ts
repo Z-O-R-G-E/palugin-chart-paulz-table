@@ -7,7 +7,7 @@ export const showTotals: ControlSetItem = {
   name: 'showTotals',
   config: {
     type: 'CheckboxControl',
-    label: t('Показать итоги'),
+    label: t('Показать общий итог'),
     default: false,
     description: t(
       'Показать общие совокупности выбранных показателей. Обратите внимание, что ограничение на количество строк не применяется к результату.',

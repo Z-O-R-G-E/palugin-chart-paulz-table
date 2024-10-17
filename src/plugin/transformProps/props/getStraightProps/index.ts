@@ -47,15 +47,14 @@ export const getStraightProps = (
     conditional_formatting: conditionalFormatting,
     allow_rearrange_columns: allowRearrangeColumns,
   } = formData;
-
   const timeGrain = extractTimegrain(formData);
+
   const [metrics, percentMetrics, columns] = memoizedProcessColumns(chartProps);
 
   let baseQuery;
   let countQuery;
   let totalQuery;
   let rowCount;
-
   if (serverPagination) {
     [baseQuery, countQuery, totalQuery] = queriesData;
     rowCount = (countQuery?.data?.[0]?.rowcount as number) ?? 0;
@@ -63,19 +62,17 @@ export const getStraightProps = (
     [baseQuery, totalQuery] = queriesData;
     rowCount = baseQuery?.rowcount ?? 0;
   }
-
   const data = memoizedProcessDataRecords(baseQuery?.data, columns);
-
   const totals =
     showTotals && queryMode === QueryMode.aggregate
       ? totalQuery?.data[0]
       : undefined;
-
   const columnColorFormatters =
     getColorFormatters(conditionalFormatting, data) ?? defaultColorFormatters;
 
   return {
     isRawRecords: queryMode === QueryMode.raw,
+    data,
     totals,
     columns,
     serverPagination,

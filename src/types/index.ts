@@ -1,4 +1,4 @@
-import { DataRecord, QueryFormData } from '@superset-ui/core';
+import { QueryFormData } from '@superset-ui/core';
 
 import {
   StraightTableFormData,
@@ -28,4 +28,6 @@ export type PaulzTableTransformedProps = PivotTableTransformedProps &
   StraightTableTransformedProps;
 
 export type PaulzTableProps = PivotTableProps &
-  StraightTableProps & { data: DataRecord[] };
+  StraightTableProps &
+  PaulzTableStylesProps &
+  PaulzTableTransformedProps;

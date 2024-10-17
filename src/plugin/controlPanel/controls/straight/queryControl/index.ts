@@ -1,12 +1,12 @@
 export { rowLimit as rowLimitStraight } from './rowLimit';
-export { allColumns } from './allColumns';
+export { columnsRawMode } from './columnsRawMode';
 export { serverPageLength } from './serverPageLength';
 export { serverPagination } from './serverPagination';
 export { timeGrainSqla as timeGrainSqlaStraight } from './timeGrainSqla';
 export { showTotals } from './showTotals';
-export { orderByCols } from './orderByCols';
-export { timeseriesLimitMetric } from './timeseriesLimitMetric';
+export { orderByRawMode } from './orderByRawMode';
+export { orderByAggMode } from './orderByAggMode';
 export { percentMetrics } from './percentMetrics';
 export { metrics as metricsStraight } from './metrics';
-export { groupby } from './groupby';
+export { dimension } from './dimension';
 export { queryMode } from './queryMode';
